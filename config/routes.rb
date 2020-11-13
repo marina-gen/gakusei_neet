@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'schedules#index'
+  get 'localhost:3000/main_screen' => 'schedule#index'
   resources :schedules
   root to: 'main_screens#index'
   resources :main_screens
