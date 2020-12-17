@@ -1,0 +1,2 @@
+class MainDiary < ApplicationRecord
+end

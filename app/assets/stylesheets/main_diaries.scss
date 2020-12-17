@@ -1,0 +1,38 @@
+.bouken {
+    color: burlywood;
+    font-size: 75px;
+    float: left;
+    margin-right: 100px;
+    margin-left: 80px;
+    
+}
+
+.waku{
+    margin: 20px;
+    /* 冒険の書とラインを揃える */
+    margin-top: 75px; 
+    margin-right: 50px;
+    padding: 15px 10px;
+    /* 枠線 */
+    border: solid 3px #000;
+    float: left;
+    width: 100px;
+    text-align: center;
+    
+}
+
+.sentaku{
+    display: flex;
+    margin-top: 20px;
+   
+}
+
+.bun{
+    border: solid 3px #000;
+    padding: 50px;
+    margin: 50px;
+    margin-top: 75px;
+    margin-left: 200px;
+    width: 1000px;
+    text-align: center;
+}
