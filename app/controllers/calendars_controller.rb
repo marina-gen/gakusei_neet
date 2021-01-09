@@ -1,9 +1,9 @@
 class CalendarsController < ApplicationController
   def index
-    d = Datetime.current.beginning_of_day  # 今日の0:00
+    d = DateTime.current.beginning_of_day  # 今日の0:00
     nd = d + 1  # 明日
-    m = Datetime.current.beginning_of_month  # 今月の初日
-    nm = Datetime.current.next_month.beginning_of_month  # 翌月の初日
+    m = DateTime.current.beginning_of_month  # 今月の初日
+    nm = DateTime.current.next_month.beginning_of_month  # 翌月の初日
     month_day = d.end_of_month.mday.to_i  # 今月は何日あるか
     m_copy = m
 
