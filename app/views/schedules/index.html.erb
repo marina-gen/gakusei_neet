@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <title> クエスト追加</title>
+    <%= stylesheet_link_tag "schedules", :media => "all"%>
+    </head>
+ 
+    <body>
+        <header class="midasi">
+          <!-- 日付 -->
+        <span id="view_today"></span>
+
+        <script type="text/javascript">
+        document.getElementById("view_today").innerHTML = getToday();
+        
+        function getToday() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var mon = now.getMonth()+1; //１を足すこと
+            var day = now.getDate();
+            var you = now.getDay(); //曜日(0～6=日～土)
+        
+            //曜日の選択肢
+            var youbi = new Array("日","月","火","水","木","金","土");
+            //出力用
+            var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ")";
+            return s;
+        }
+        </script>
+        <!-- 日付ここまで -->
+        </header>
+        
+        <main class="main">
+        <%= form_tag("/schedues/index") do %>
+           <form action="#" method="post">
+
+                    <input type="kakomi-box1" placeholder="予定を追加" class="kakomi-box1">
+                   
+                    <input type="kakomi-box1" placeholder="時間を追加" class="kakomi-box1">
+                
+                    
+                <textarea class="kakomi-box1"  type="search" name="q" placeholder="メモは100字以内"></textarea>
+            </form> 
+            <!-- <div class="kakomi-box1 yotei">
+                <span class="title-box">本日の予定</span>
+                <ul class="menu">
+                </ul>
+            </div> -->
+        </main>  
+           
+    </body>
+        <footer>
+            <div class="footerInner">
+                <a href="" class="btn btn-svg">
+                    <svg>
+                      <rect x="1.5" y="1.5" rx="0" fill="none" width="150" height="50"></rect>
+                    </svg>
+                    <span class="kinou">セーブ</span>
+        <% end %>
+                </a>
+                <a href="" class="btn btn-svg">
+                    <svg>
+                      <rect x="2" y="2" rx="0" fill="none" width="150" height="50"></rect>
+                    </svg>
+                    <span>戻る</span>
+                  </a>
+            </div>
+        </footer>
+
+    
+</html>
