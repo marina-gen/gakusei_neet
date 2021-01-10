@@ -3,16 +3,15 @@ class SchedulesController < ApplicationController
         
     end
     def create
-        @post = Post.new(name: params[:name])
-        @post.save
-        
-        @post = Post.new(staretdate: params[:startdate])
-        @post.save
-        
-        @post = Post.new(moemo: parms[:memo])
-        @post.save
-        redirect_to("")
+        schedule = Schedule.new(schedule_params)
+    
+        schedule.save!
+        redirect_to("")#リダイレクト先URL
 
+    end
+
+    def schedule_params
+        params.require(:schedule).permit(:name, :startdate, :memo)
     end
 end
 

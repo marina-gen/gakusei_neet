@@ -32,7 +32,7 @@
         </header>
         
         <main class="main">
-        <%= form_tag("/schedues/index") do %>
+        <%= form_for(@schedule) do |f| %>
            <form action="#" method="post">
 
                     <input type="kakomi-box1" placeholder="予定を追加" class="kakomi-box1">

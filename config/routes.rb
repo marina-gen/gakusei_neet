@@ -1,7 +1,3 @@
 Rails.application.routes.draw do
-  get 'user/index'
-  get 'localhost:3000/main_screen' => 'schedule#index'
-  resources :schedules
-  root to: 'main_screens#index'
-  resources :main_screens
+  resources :schedules, only: [:create, :new]
 end
