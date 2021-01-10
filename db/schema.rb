@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 2020_11_17_150204) do
   create_table "schedules", force: :cascade do |t|
     t.string "name"
     t.datetime "startdate"
+    t.datetime "enddate"
+    t.integer "allday"
+    t.text "memo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
