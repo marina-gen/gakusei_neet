@@ -1,10 +1,25 @@
+@font-face {
+  font-family: "PixelMplus12-Regular";
+  src: font-url('/assets/PixelMplus12-Regular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-image: image-url('haikei.png');
+  background-size: cover; 
+  font-family:"PixelMplus12-Regular";                          
+}
+
 .title {
     text-align:center;
     font-size: 75px;
+    
   }
   
   .list {
-    list-style: none;
+    display: flex;
+    justify-content: space-between;
   }
   
   /* .menu {
@@ -19,7 +34,7 @@
     padding: 1.2em;
     width: 90%;
     color: #555555; /* 文字色 */
-    background-color: #fff;
+    background-color: rgba($color: #fff, $alpha: 0.8);
     border: 4px double#0c0b0b; /* 枠線の太さ・色 */
     box-shadow: 2px 2px 2px #ccc;/* 影の色 */
     
@@ -34,7 +49,7 @@
     padding: 1.2em;
     width: 90%;
     color: #555555; /* 文字色 */
-    background-color: #fff;
+    background-color: rgba($color: #fff, $alpha: 0.8);
     border: 4px double #0c0b0b; /* 枠線の太さ・色 */
     box-shadow: 2px 2px 2px #ccc;/* 影の色 */
     
@@ -46,7 +61,7 @@
     left: 20px;
     top: -15px;
     font-weight: bold;
-    background-color:  #fff; /* タイトル背景色 */
+    background-color: rgba($color: #fff, $alpha: 0.8); /* タイトル背景色 */
     color: #0c0b0b; /* タイトル文字色 */
     
    }
@@ -56,9 +71,9 @@
     max-width: 700px;
   }
   .container-calendar {
-    background: #ffffff;
+    background-color: rgba($color: #fff, $alpha: 0.8);
     padding: 15px;
-    width: 100%;
+    width: 85%;
     margin: 0 auto;
     overflow: auto;
   }
@@ -79,14 +94,15 @@
   .table-calendar th,
   .table-calendar td{
     padding: 10px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid #0c0b0b;
+    border-width: 2px;
     text-align: center;
     vertical-align: top;
   }
   .date-picker.selected {
     font-weight: bold;
     color: #fff;
-    background: #cc0000;
+    background: #9acd32;
   }
   .date-picker.selected span {
     border-bottom: 2px solid currentColor;
@@ -102,6 +118,7 @@
   #monthAndYear {
     text-align: center;
     margin-top: 0;
+    font-size: 50px;
   }
   .button-container-calendar {
     position: relative;
