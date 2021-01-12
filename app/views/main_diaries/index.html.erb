@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>冒険の書</title>
+    <link rel="stylesheet" href="nikki.css">
+
+</head>
+
+
+
+<body background="haikei.jpg">
+    <header>
+        <!-- タイトル -->
+        <h1 class="bouken">冒険の書<span style="font-size: 45px;"> -ぼうけんのしょ-</span></h1>
+        <!-- 機能選択 -->
+
+            <a href="" class="btn btn-svg">
+                <svg>
+                  <rect x="1.5" y="1.5" rx="0" fill="none" width="150" height="50"></rect>
+                </svg>
+                <span class="kinou">セーブ</span>
+            </a>
+            <a href="" class="btn btn-svg">
+                <svg>
+                  <rect x="2" y="2" rx="0" fill="none" width="150" height="50"></rect>
+                </svg>
+                <span>消去</span>
+              </a>
+              <a href="" class="btn btn-svg">
+                <svg>
+                  <rect x="2" y="2" rx="0" fill="none" width="150" height="50"></rect>
+                </svg>
+                <span>戻る</span>
+              </a>
+
+    </header>
+
+    <main>
+    <!-- 日記選択画面 -->
+    <div class="nikki">
+        <% @diaries.each do |diary| %>
+            <ul class="bun">
+                <p><%= diary.today %></p>
+                <p><%= diary.diary %></p>
+            </ul>
+        <% end %>
+    </div>
+</main>
+    </main>
+
+</body>
+
+
+
+
+
+</html>
