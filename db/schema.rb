@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_11_19_031515) do
 
   create_table "main_diaries", force: :cascade do |t|
     t.date "today", null: false
-    t.text "diary"
+    t.text "diary", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
