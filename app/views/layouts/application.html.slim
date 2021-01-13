@@ -1,25 +1,46 @@
-doctype html
-html
-  head
-    title
-      | CldRpg
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-  body
-    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-      .navbar-brand Taskleaf
+<!DOCTYPE html>
+<html lang="ja">
 
-      ul.navbar-nav.ml-auto
-        - if current_user
-          /li.nav-item= link_to 'タスク一覧', tasks_path, class: 'nav-link'
-          /li.nav-item= link_to 'ユーザー一覧', admin_user_path, class: 'nav-link'
-          /li.nav-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'
-        - else
-          li.nav-item= link_to 'ログイン', login_path, class: 'nav-link'
-    .container
-      - if flash.notice.present?
-        .alert.alert-sucess= flash.notice
-    = yield
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カレンダーRPG</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div>
+        <h1 class=title>カレンダーRPG</h1>
+    </div>
+
+    <form action="">
+        <div class="login">
+            <div class="form">
+                <p>ユーザーID　　:</p>
+                <input class="box" type="text" name="mail">
+            </div>
+            <div class="form">
+                <p>メールアドレス:</p>
+                <input class="box" type="text" name="mail">
+            </div>
+            <div class="form">
+                <p>パスワード　　:</p>
+                <input class="box" type="password" name="pass">
+            </div>
+            <div class="start">
+                <a href="main.html">
+                    <input class="btn" onclick="location.href='./main.html'" type="submit" value="冒険をはじめる">
+                </a>
+            </div>
+            <div class="registration">
+                <a href="Registration.html">新規登録はこちら</a>
+            </div>
+        </div>
+
+
+    </form>
+
+
+</body>
+
+</html>
