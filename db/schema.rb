@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_150204) do
+ActiveRecord::Schema.define(version: 2020_11_13_211443) do
+
+  create_table "main_diaries", force: :cascade do |t|
+    t.date "today", null: false
+    t.text "diary", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "main_screens", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -25,10 +32,13 @@ ActiveRecord::Schema.define(version: 2020_11_17_150204) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
