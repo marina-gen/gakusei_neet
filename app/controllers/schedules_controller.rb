@@ -3,7 +3,7 @@ class SchedulesController < ApplicationController
         
     end
     def create
-        schedule = Schedule.new(schedule_params)
+        schedule = Schedules.new(schedule_params)
     
         schedule.save!
         redirect_to("")#リダイレクト先URL

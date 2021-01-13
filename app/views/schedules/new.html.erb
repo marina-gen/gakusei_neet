@@ -32,15 +32,15 @@
         </header>
         
         <main class="main">
-        <%= form_for(@schedule) do |f| %>
+        <%= form_with model: @schedules do |f| %>
            <form action="#" method="post">
 
-                    <input type="kakomi-box1" placeholder="予定を追加" class="kakomi-box1">
+                    <input type="kakomi-box1" name="name" placeholder="予定を追加" class="kakomi-box1">
                    
-                    <input type="kakomi-box1" placeholder="時間を追加" class="kakomi-box1">
+                    <input type="kakomi-box1" name="startdate" placeholder="時間を追加" class="kakomi-box1">
                 
                     
-                <textarea class="kakomi-box1"  type="search" name="q" placeholder="メモは100字以内"></textarea>
+                <textarea class="kakomi-box1"  type="search" name="memo" placeholder="メモは100字以内"></textarea>
             </form> 
             <!-- <div class="kakomi-box1 yotei">
                 <span class="title-box">本日の予定</span>
