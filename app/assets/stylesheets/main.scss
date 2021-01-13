@@ -151,3 +151,55 @@ body {
   /* .list {
     display: inline-block;
   } */
+
+  .simple-calendar {
+    .calendar-heading {
+      text-align: center;
+    }
+    .calendar-title {
+      margin-top: 0;
+      font-size: 50px;
+    }
+
+    .day {
+      padding: 10px;
+      border: 1px solid #0c0b0b;
+      border-width: 2px;
+      text-align: center;
+      vertical-align: top;
+    }
+  
+    .wday-0 {
+      color: red;
+    }
+    .wday-1 {}
+    .wday-2 {}
+    .wday-3 {}
+    .wday-4 {}
+    .wday-5 {}
+    .wday-6 {
+      color: blue;
+    }
+  
+    .today {
+      font-weight: bold;
+      color: #fff;
+      background: #9acd32;
+    }
+    .past {}
+    .future {}
+  
+    .start-date {}
+  
+    .prev-month {
+      background-color: transparent;
+      color: transparent;
+    }
+    .next-month {
+      background-color: transparent;
+      color: transparent;
+    }
+    .current-month {}
+  
+    .has-events {}
+  }
