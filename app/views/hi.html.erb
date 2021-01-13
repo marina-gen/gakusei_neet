@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>今日</title>
+    <%= stylesheet_link_tag "hi", :media => "all" %>
+   
+</head>
+
+<body background="haikei.png">
+    <header>
+        <!-- 日付 -->
+        <span id="view_today"></span>
+
+        <script type="text/javascript">
+        document.getElementById("view_today").innerHTML = getToday();
+        
+        function getToday() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var mon = now.getMonth()+1; //１を足すこと
+            var day = now.getDate();
+            var you = now.getDay(); //曜日(0～6=日～土)
+        
+            //曜日の選択肢
+            var youbi = new Array("日","月","火","水","木","金","土");
+            //出力用
+            var s = year + "年" + mon + "月" + day + "日 (" + youbi[you] + ")".small();
+            return s;
+        }
+        </script>
+        <!-- 日付ここまで -->
+    </header>
+    <main>
+      <div class="caption_box" data-caption="予定"><br>今日の予定はありません</div><div class="caption_box" data-caption="時刻"><br>予定時刻</div><div class="caption_box" data-caption="日記"><br>日記まだ書いてないです</div>
+
+    </main>
+    <footer>
+        <div class="seave">
+            <a href="" class="btn btn-svg">
+                <svg>
+                  <rect x="2" y="2" rx="0" fill="none" width="150" height="50"></rect>
+                </svg>
+                <span>予定を追加</span>
+              </a>
+            <a href="" class="btn btn-svg">
+                <svg>
+                  <rect x="2" y="2" rx="0" fill="none" width="150" height="50"></rect>
+                </svg>
+                <span>戻る</span>
+              </a>
+        </div>
+    </footer>
+</body>
+
+</html>
