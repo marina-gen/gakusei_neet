@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="PixelMplus12-Regular">
     <title> クエスト追加</title>
-    <%= stylesheet_link_tag "schedules", :media => "all"%>
+    <%= stylesheet_link_tag "Quest_tuika", :media => "all" %>
     </head>
- 
+
     <body>
+        <face face="PixelMplus12-Regular">
         <header class="midasi">
           <!-- 日付 -->
         <span id="view_today"></span>
@@ -32,23 +33,16 @@
         </header>
         
         <main class="main">
-        <%= form_with model: @schedules do |f| %>
+            <%= form_with model: @schedules do |f| %>
            <form action="#" method="post">
 
                     <input type="kakomi-box1" name="name" placeholder="予定を追加" class="kakomi-box1">
-                   
                     <input type="kakomi-box1" name="startdate" placeholder="時間を追加" class="kakomi-box1">
-                
-                    
                 <textarea class="kakomi-box1"  type="search" name="memo" placeholder="メモは100字以内"></textarea>
-            </form> 
-            <!-- <div class="kakomi-box1 yotei">
-                <span class="title-box">本日の予定</span>
-                <ul class="menu">
-                </ul>
-            </div> -->
+            </form>
         </main>  
            
+    </face>
     </body>
         <footer>
             <div class="footerInner">
@@ -57,7 +51,7 @@
                       <rect x="1.5" y="1.5" rx="0" fill="none" width="150" height="50"></rect>
                     </svg>
                     <span class="kinou">セーブ</span>
-        <% end %>
+                    <% end %>
                 </a>
                 <a href="" class="btn btn-svg">
                     <svg>
@@ -67,6 +61,3 @@
                   </a>
             </div>
         </footer>
-
-    
-</html>
