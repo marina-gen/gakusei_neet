@@ -9,7 +9,7 @@ class SchedulesController < ApplicationController
         
     end
     def create
-        @schedule = Schedules.new(schedule_params)
+        @schedule = Schedule.new(schedule_params)
     
         if @schedule.save
             render 'index'
@@ -17,8 +17,8 @@ class SchedulesController < ApplicationController
             render 'new'
         end
 
-        flash[:notice] = "スケジュール「#{schedule.name}」登録しました。"
-        redirect_to action: :index
+        #flash[:notice] = "スケジュール「#{schedule.name}」登録しました。"
+        #redirect_to action: :index
         
 
     end
@@ -26,7 +26,7 @@ class SchedulesController < ApplicationController
     private
 
         def schedule_params
-            params.require(:schedule).permit(:name, :description)
+            params.require(:schedule).permit(:name, :startdate)
         end
 end
 

@@ -35,11 +35,12 @@
         
         <main class="main">
             <%= form_with Schedule: @schedules do |f| %>
-           <form action="#" method="post">
+            <form action="#" method="post">
 
                     <input type="kakomi-box1" name="name" placeholder="予定を追加" class="kakomi-box1">
                     <input type="kakomi-box1" name="startdate" placeholder="時間を追加" class="kakomi-box1">
-                <textarea class="kakomi-box1"  type="search" name="memo" placeholder="メモは100字以内"></textarea>
+                    <textarea class="kakomi-box1"  type="search" name="memo" placeholder="メモは100字以内"></textarea>
+                    <%= f.submit "登録する" %>s
             </form>
         </main>  
            
@@ -52,6 +53,7 @@
                       <rect x="1.5" y="1.5" rx="0" fill="none" width="150" height="50"></rect>
                     </svg>
                     <span class="kinou">セーブ</span>
+                    <input type="submit" value="セーブ" class="kinou">
                     <% end %>
                 </a>
                 <a href="" class="btn btn-svg">
